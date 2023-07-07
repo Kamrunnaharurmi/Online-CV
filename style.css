@@ -1,0 +1,394 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:black;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 40px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 30px;
+    color: whitesmoke;
+    text-decoration: none;
+    margin-right: 250px;
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 50px;
+    transition: .5s;
+}
+
+.navbar a:hover ,
+.navbar a.active {
+    color: rgb(174, 174, 213);
+}
+
+#menu-icon {
+    font-size: 3rem;
+    color: aliceblue;
+    cursor: pointer;
+    display: none;
+}
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    background: url('Image.png');
+    background-size: cover;
+    background-position: right;
+}
+
+.home-content {
+    max-width: 60rem;
+}
+
+.home-content h1 {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1;
+    color: white;
+}
+
+.text-animate {
+    position: relative;
+    width: 32.8rem;
+}
+
+.text-animate h3 {
+    font-size: 45px;
+    font-weight: 700;
+    color: rgb(113, 2, 73);
+    line-height: 1;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 220px;
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    font-size: 30px;
+    color: white;
+    z-index: 1;
+    overflow: hidden;
+    transition: .4s;
+}
+.home-sci a:hover {
+    color: white;
+}
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(41, 41, 137, 0.436);
+    z-index: -1;
+    transition: .4s;
+}
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    min-height: auto;
+    background: black;
+    padding-bottom: 10px;
+}
+
+.heading {
+    font-size: 40px;
+    text-align:center;
+    color: white;
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+    color: rgb(113, 2, 73);
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    height: 220px;   
+    color: white;
+}
+
+.btn-box .btns {
+display: inline-block;
+width: 15rem;
+color: rgb(113, 2, 73);
+}
+
+.btn-box .btns a::before {
+    top: 200px;
+    background: blue;
+}
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: black;
+}
+.heading1 {
+    min-height: auto;
+    font-size: 40px;
+    color: rgb(113, 2, 73);
+    text-align:center;
+    bottom: 10px;
+}
+.education-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.education-column {
+    flex: 1 1 40rem;
+}
+.title {
+    font-size: 30px;
+    margin: 0 0 1.5rem 2rem;
+    color: white;
+}
+
+.education-box {
+    border-left: .2rem solid ;
+    color: white;
+}
+.education-content {
+    position: relative;
+    padding-left: 2rem;
+}
+.education-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: white;
+    border-radius: 50%;
+}
+.content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid ;
+    color: rgb(113, 2, 73);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+.content:hover {
+    color: var(--bg-color);
+}
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(41, 41, 137, 0.436);
+    z-index: 1;
+    transition: .4s;
+}
+.content:hover::before {
+    width: 100%;
+}
+.year {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 200;
+    padding-bottom: .5rem;
+}
+.content h3{
+    font-size: 1rem;
+    color: white;
+    font-weight: 200;
+}
+
+.skills {
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: black;
+}
+.heading2 {
+    font-size: 40px;
+    color: rgb(113, 2, 73);
+    text-align:center;
+}
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.skills-column {
+    flex: 1 1 40rem;
+}
+.title1 {
+    font-size: 30px;
+    margin: 0 0 1.5rem;
+    color: white;
+}
+.skills-content {
+    position: relative;
+    border: .2rem solid;
+    color: white;
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.skills-content::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: rgba(41, 41, 137, 0.436);
+z-index: -1;
+transition: .4s;
+}
+.skills-content:hover::before {
+    width: 100%;
+}
+
+.progress {
+    padding: 1rem 0;
+}
+.progress h3 {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(113, 2, 73);
+}
+.progress h3 span {
+    color: rgb(113, 2, 73);
+}
+.bar {
+height: 2.5rem;
+border: .2rem solid;
+color: white;
+border-radius: .6rem;
+padding: .5rem;
+margin: 1rem 0;
+}
+.bar span {
+    display: block;
+    height: 100%;
+    background-color: white;
+    border-radius: .3rem;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+    width: 60%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
+    width: 60%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+    width: 90%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
+    width: 90%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
+    width: 90%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span {
+    width: 90%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(7) .bar span {
+    width: 70%;
+}
+
+.contacts {
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: black;
+}
+.heading3 {
+    font-size: 40px;
+    color: rgb(113, 2, 73);
+    text-align:center;
+}
+.contacts-content {
+    position: relative;
+    border: .2rem solid;
+    color: white;
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.contacts-content p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    height: 220px;     
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: rgb(113, 2, 73);
+}
+
+.footer-text p {
+font-size: 16px;
+font-weight: 600;
+}
